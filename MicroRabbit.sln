@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Bus", "Infra.Bus", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.Bus", "Infra.Bus\MicroRabbit.Infra.Bus\MicroRabbit.Infra.Bus.csproj", "{CA9A6D99-EEA6-4BE0-A257-C58F98CEAA9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{64771907-AC16-4C4D-BC85-F697E85BDEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.IoC", "Infra.IoC\MicroRabbit.Infra.IoC\MicroRabbit.Infra.IoC.csproj", "{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,9 +52,22 @@ Global
 		{CA9A6D99-EEA6-4BE0-A257-C58F98CEAA9A}.Release|x64.Build.0 = Release|Any CPU
 		{CA9A6D99-EEA6-4BE0-A257-C58F98CEAA9A}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA9A6D99-EEA6-4BE0-A257-C58F98CEAA9A}.Release|x86.Build.0 = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|x64.Build.0 = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B2973822-DF23-44DD-8EB6-FA4D4117D527} = {B2319AA9-D6F7-4580-8B52-E5A51719695C}
 		{CA9A6D99-EEA6-4BE0-A257-C58F98CEAA9A} = {1B5085BD-7F69-4C4F-90EF-701C1418825B}
+		{BC7B12C8-FA3B-446E-8183-5EF7E64B42FF} = {64771907-AC16-4C4D-BC85-F697E85BDEB2}
 	EndGlobalSection
 EndGlobal
