@@ -10,11 +10,32 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // "startupProject": "${workspaceFolder}/Microservices/Banking/API/MicroRabbit.Banking.API/MicroRabbit.Banking.API.csproj",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/Microservices/Banking/API/MicroRabbit.Banking.API/bin/Debug/netcoreapp3.1/MicroRabbit.Banking.API.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Microservices/Banking/API/MicroRabbit.Banking.API",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            // "serverReadyAction": {
+            //     "action": "openExternally",
+            //     "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            // },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Transfers (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Microservices/Transfers/API/MicroRabbit.Transfers.API/bin/Debug/netcoreapp3.1/MicroRabbit.Transfers.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Microservices/Transfers/API/MicroRabbit.Transfers.API",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             // "serverReadyAction": {
