@@ -1,8 +1,14 @@
+using System;
+using System.Net;
+using DatingApp.Helpers;
+using FluentValidation;
 using MediatR;
 using MicroRabbit.Banking.Data.Context;
 using MicroRabbit.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +40,8 @@ namespace MicroRabbit.Banking.API
 
             services.AddMediatR(typeof(Startup));
 
+            
+            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
             RegisterServices(services);
         }
 
@@ -48,6 +56,20 @@ namespace MicroRabbit.Banking.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler(builder =>
+                    builder.Run(async ctx =>
+                    {
+                        ctx.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        var errorObj = ctx.Features.Get<IExceptionHandlerFeature>();
+                        if (errorObj != null)
+                        {
+                            ctx.Response.AddApplicationError(errorObj.Error.Message);
+                            await ctx.Response.WriteAsync(errorObj.Error.Message);
+                        }
+                    }));
             }
 
             app.UseRouting();

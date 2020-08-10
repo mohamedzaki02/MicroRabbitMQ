@@ -16,11 +16,39 @@
           "MicroRabbit.Transfers.Domain.dll": {}
         }
       },
+      "FluentValidation/9.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.1.1.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.1.1": {
+        "dependencies": {
+          "FluentValidation": "9.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.1.1.0"
+          }
+        }
+      },
       "MediatR/8.1.0": {
         "runtime": {
           "lib/netstandard2.0/MediatR.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.18136"
           }
         }
       },
@@ -30,9 +58,19 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "System.ComponentModel.Annotations/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "MicroRabbit.Domain.Core/1.0.0": {
         "dependencies": {
-          "MediatR": "8.1.0"
+          "FluentValidation.DependencyInjectionExtensions": "9.1.1",
+          "MediatR": "8.1.0",
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
           "MicroRabbit.Domain.Core.dll": {}
@@ -46,12 +84,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "FluentValidation/9.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7ztrqgJaKD5+tbnQwdRKPrL1EChnfpMzqvkRIQk9IogovAyvBAAdDiiZvO8+q0xeFyMUbSUOsSMBdKDMjjDaKQ==",
+      "path": "fluentvalidation/9.1.1",
+      "hashPath": "fluentvalidation.9.1.1.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DG7cReJfu+V+ylNq4M1OqF9iyw2QhKNJJr5U1D2D0X15Tn9jLzBRMXrO/rY5fIVpG/fIB7U9Is+2YWkSDokB7w==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.1.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.1.1.nupkg.sha512"
+    },
     "MediatR/8.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
       "path": "mediatr/8.1.0",
       "hashPath": "mediatr.8.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -66,6 +125,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
     },
     "MicroRabbit.Domain.Core/1.0.0": {
       "type": "project",

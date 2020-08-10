@@ -4,6 +4,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="8.1.0"/>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.1.1"/>
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
